@@ -157,6 +157,13 @@
                 .each(settings.rowCallback);
             settings.callback.call(element);
         };
+        /** For external usage: Toggle selection of all items */
+        this.invertSelection = function() {
+            $element.find('.'+settings.itemClass)
+                .toggleClass(settings.selectedClass)
+                .each(settings.rowCallback);
+            settings.callback.call(element);
+        };
     };
     
     /** jQuery Plugin method */

@@ -60,6 +60,7 @@ Method | Meaning
 ------ | -------
 `selectAll()` | select all items of the list
 `selectNone()` | clear selection
+`invertSelection()` | toggle selection of all items
 
 The above mentioned methods will also call the appropriate callback functions after changing selection.
 

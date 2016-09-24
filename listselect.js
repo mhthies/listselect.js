@@ -22,6 +22,9 @@
 * SOFTWARE.
 */
 (function($) {
+    /** Use Array reverse() method on jQuery objects. */
+    $.fn.reverse = Array.prototype.reverse;
+    
     var ListSelect = function(element,options) {
         var $element = $(element);
         var obj = this;
@@ -57,7 +60,7 @@
             var $c = $element.find('.'+settings.cursorClass);
             var $s = $element.find('.'+settings.startClass);
             var $list = ($c.index() > $s.index()) ?
-                    $s.nextAll('.'+settings.itemClass) : $s.prevAll('.'+settings.itemClass);
+                    $s.add($s.nextAll('.'+settings.itemClass)) : $s.add($s.prevAll('.'+settings.itemClass)).reverse();
             $list.each(function() {
                 selectSingle($(this));
                 

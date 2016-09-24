@@ -33,17 +33,17 @@ to the constructor.
 
 ## Options
 
-Option | Type | Meaning | Default Value
------- | ---- | ------- | -------------
-`mouse` | Boolean | enable/disable mouse interaction | `true`
-`keyboard` | Boolean | enable/disable keyboard interaction | `true`
-`itemClass` | String | class used to tag items | `'ls-item'`
-`selectedClass` | String | class to mark selected items | `'ls-selected'`
-`cursorClass` | String | class to mark cursor item | `'ls-cursor'`
-`startClass` | String | class to mark selection start pointer item | `'ls-start'`
-`focusFirst` | Boolean | focus first item at initialization | true
-`callback` | Function | callback function to be called after an interaction | `function() {}`
-`rowCallback` | Function | callback function to be called on every changed item | `function() {}`
+Option          | Type     | Meaning                                              | Default Value
+--------------- | -------- | ---------------------------------------------------- | -------------
+`mouse`         | Boolean  | enable/disable mouse interaction                     | `true`
+`keyboard`      | Boolean  | enable/disable keyboard interaction                  | `true`
+`itemClass`     | String   | class used to tag items                              | `'ls-item'`
+`selectedClass` | String   | class to mark selected items                         | `'ls-selected'`
+`cursorClass`   | String   | class to mark cursor item                            | `'ls-cursor'`
+`startClass`    | String   | class to mark selection start pointer item           | `'ls-start'`
+`focusFirst`    | Boolean  | focus first item at initialization                   | `true`
+`callback`      | Function | callback function to be called after an interaction  | `function() {}`
+`rowCallback`   | Function | callback function to be called on every changed item | `function() {}`
 
 ## API
 
@@ -56,10 +56,11 @@ attributes of the list element:
 ```
 
 The following public methods are available:
-Method | Meaning
------- | -------
-`selectAll()` | select all items of the list
-`selectNone()` | clear selection
+
+Method              | Meaning
+------------------- | -------
+`selectAll()`       | select all items of the list
+`selectNone()`      | clear selection
 `invertSelection()` | toggle selection of all items
 
 The above mentioned methods will also call the appropriate callback functions after changing selection.

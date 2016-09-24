@@ -31,5 +31,37 @@ to the constructor.
 </script>
 ```
 
-## Arguments
+## Options
 
+Option | Type | Meaning | Default Value
+------ | ---- | ------- | -------------
+`mouse` | Boolean | enable/disable mouse interaction | `true`
+`keyboard` | Boolean | enable/disable keyboard interaction | `true`
+`itemClass` | String | class used to tag items | `'ls-item'`
+`selectedClass` | String | class to mark selected items | `'ls-selected'`
+`cursorClass` | String | class to mark cursor item | `'ls-cursor'`
+`startClass` | String | class to mark selection start pointer item | `'ls-start'`
+`focusFirst` | Boolean | focus first item at initialization | true
+`callback` | Function | callback function to be called after an interaction | `function() {}`
+`rowCallback` | Function | callback function to be called on every changed item | `function() {}`
+
+## API
+
+To access the list programmatically, use the public methods of the listSelect object, which is stored in the data
+attributes of the list element:
+```
+<script type="text/javascript">
+    $('#example-list').data('listSelect').selectAll();
+</script>
+```
+
+The following public methods are available:
+Method | Meaning
+------ | -------
+`selectAll()` | select all items of the list
+`selectNone()` | clear selection
+
+The above mentioned methods will also call the appropriate callback functions after changing selection.
+
+To select/unselect a single item just add/remove the `selectClass` to/from the item element. listselect.js will consider
+the item as selected; still, the callback function isn't called.

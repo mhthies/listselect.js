@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <title>listselect.js Example</title>
+        
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="listselect.js"></script>
+        
+        <script type="text/javascript">
+            $(function() {
+                $('div.list').listSelect();
+            });
+        </script>
+        
+        <style type="text/css">
+            div.list {
+                border: solid 2px #555;
+                padding: 10px;
+            }
+            div.item {
+                border: solid 1px #ddd;
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+            .item.ls-selected {
+                background: #aaf;
+            }
+            .item.ls-cursor {
+                border-color: #f8f;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>listselect.js</h1>
+        <div class="list ls-list">
+            <div class="item ls-item"> 1 item</div>
+            <div class="item ls-item"> another item</div>
+            <div class="item ls-item"> just more items</div>
+            <div class="item ls-item"> and so on</div>
+            <div class="item ls-item"> 1 item</div>
+            <div class="item ls-item"> another item</div>
+            <div class="item ls-item"> just more items</div>
+            <div class="item ls-item"> and so on</div>
+            <div class="item ls-item"> and so on</div>
+            <div class="item ls-item"> 1 item</div>
+            <div class="item ls-item"> another item</div>
+            <div class="item ls-item"> just more items</div>
+            <div class="item ls-item"> and so on</div>
+        </div>
+        
+    </body>
+</html>
